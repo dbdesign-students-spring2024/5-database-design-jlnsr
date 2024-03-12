@@ -28,7 +28,8 @@ Every non-key field following the primary key field, **assignment_id**–which r
 | 2        | 25    | 2             | 7           |
 | 3        | 75    | 1             | 2           |
 | 4        | 92    | 5             | 2           |
-| 5        | 65    | 4             | 2           |  
+| 5        | 65    | 4             | 2           |    
+
 Each grade deserves its own record that describes both the assignment to which it corresponds, and the student whose performance it reflects. This table is fourth normal-form compliant because all non-key fields provide facts about the primary key, **grade_id**, which uniquely identifies each individual grade.  
 ### Professor table  
 | professor_id | professor_ name| email             |
@@ -50,8 +51,9 @@ Each grade deserves its own record that describes both the assignment to which i
 | 3          | 001     | Applied Internet Technologies     | 1            | WWH 101    |
 | 4          | 001     | Discard Studies                   | 3            | WWH 101    | 
 | 5          | 002     | Discard Studies                   | 3            | 60FA 314   |  
+
 More than one professor may teach a particular course, which may be divided into several sections that meet in different classrooms. The ‘section’ table uniquely identifies each particular section, which meets in one classroom under one professor. Using a ‘course’ or ‘professor’ as the primary key would violate both the first normal-form and potentially the fourth, because such a table would inevitably have non-singular values. 
 The ‘student’ table provides the name of each student along with the section they’re enrolled in. Finding all the students in a particular section would simply require searching all students whose **section_id** value holds a particular value. For instance, all students whose **section_id** is 2 are in section 002 of Database Design, taught by professor (professor_id **2** =)  Logston.   
 
-### [ER Diagram](images/assign#5.svg)
-![My ER Diagram](images/erDiagram.png)
+### [ER Diagram](images/erDiagram2.svg)
+![My ER Diagram](images/erDiagram2.png)
